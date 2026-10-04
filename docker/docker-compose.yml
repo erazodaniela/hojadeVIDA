@@ -1,0 +1,17 @@
+services:
+  android-dev-environment:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: bioapp_android_container
+    ports:
+      - "5900:5900"   # Puerto para servidor gráfico VNC
+      - "5554:5554"   # Puerto ADB Emulador
+      - "5555:5555"   # Puerto ADB Emulador
+    volumes:
+      - ../mobile-app:/workspace/mobile-app
+      - ../docs:/workspace/docs
+    environment:
+      - DISPLAY=:0
+    privileged: true   # Necesario para emulador AVD con aceleración por hardware (KVM)
+    restart: unless-stopped

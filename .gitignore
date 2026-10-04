@@ -1,0 +1,49 @@
+# =========================================================================
+# GITIGNORE - PROYECTO HOJA DE VIDA (ANDROID NATIVO, WEB & FLUTTER WRAPPER)
+# =========================================================================
+
+# Android & Gradle
+.gradle/
+build/
+**/build/
+*.apk
+*.ap_
+*.dex
+*.class
+local.properties
+.navigation/
+captures/
+.externalNativeBuild/
+.cxx/
+*.aab
+
+# Flutter & Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+cv_flutter_wrapper/build/
+cv_flutter_wrapper/.dart_tool/
+cv_flutter_wrapper/.flutter-plugins
+cv_flutter_wrapper/.flutter-plugins-dependencies
+
+# Node & Web
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs & Editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini

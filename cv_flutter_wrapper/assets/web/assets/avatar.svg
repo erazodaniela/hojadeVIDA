@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#EC4899"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <filter id="shadowFilter" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <circle cx="60" cy="60" r="56" fill="url(#avatarGrad)" filter="url(#shadowFilter)" />
+  <circle cx="60" cy="60" r="52" fill="none" stroke="#ffffff" stroke-width="2" stroke-opacity="0.4" />
+  <text x="60" y="70" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="36" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="1">DE</text>
+</svg>

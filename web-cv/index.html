@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoja de Vida Profesional | Daniela Madelain Erazo Montenegro</title>
+  <meta name="description" content="Hoja de vida interactiva y portafolio profesional de Daniela Madelain Erazo Montenegro, estudiante de Ingeniería en Computación en la Universidad Politécnica Estatal del Carchi (UPEC).">
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN Y CABECERA FLOTANTE -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand">
+        <span class="brand-icon-wrapper">
+          <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        </span>
+        <span class="brand-title">Daniela Erazo CV</span>
+      </div>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul>
+          <li><a href="#perfil" class="nav-link active">Perfil</a></li>
+          <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#educacion" class="nav-link">Educación</a></li>
+          <li><a href="#referencias" class="nav-link">Referencias</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <div class="header-contact-wrapper">
+          <a href="tel:0939484810" class="header-contact-chip" title="Llamar al 0939484810">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span class="header-phone-text">0939484810</span>
+          </a>
+          <a href="https://wa.me/593939484810" target="_blank" rel="noopener noreferrer" class="header-whatsapp-chip" title="Enviar WhatsApp al 0939484810">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.81 9.81 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.17 8.17 0 0 1-5.83 2.42c-1.47 0-2.91-.39-4.17-1.14l-.3-.18-3.1 1 .83-3.02-.2-.31a8.19 8.19 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.24-8.24zm4.53 10.96c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.15.17-.29.18-.54.06s-1.05-.39-2-1.23c-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.35-.77-1.85c-.2-.48-.41-.42-.56-.43-.14 0-.3-.01-.46-.01s-.42.06-.64.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+            <span class="header-wa-text">WhatsApp</span>
+          </a>
+        </div>
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Cambiar tema claro u oscuro" onclick="toggleTheme()">
+          <span id="themeIcon" class="theme-icon-wrapper">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+
+    <!-- SECCIÓN PERFIL Y HEADER PERSONAL -->
+    <section id="perfil" class="profile-hero-section">
+      <article class="profile-card">
+        <div class="profile-top">
+          <label class="avatar-container" for="photoInput" title="Haz clic aquí para subir tu foto de perfil institucional">
+            <img src="./assets/avatar.svg" alt="Foto de perfil de Daniela Madelain Erazo Montenegro" id="profileImage" class="profile-avatar" width="96" height="96">
+            <div class="avatar-upload-badge">
+              <svg class="svg-icon" viewBox="0 0 24 24"><path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/></svg>
+            </div>
+          </label>
+          <input type="file" id="photoInput" accept="image/*" onchange="uploadProfilePhoto(event)" style="display:none">
+
+          <div class="profile-info">
+            <h1 class="profile-name">Daniela Madelain Erazo Montenegro</h1>
+            <p class="profile-subtitle">Ingeniería en Computación (7mo Semestre) • UPEC</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 6px;">
+              <div class="status-chip" id="statusChip">
+                <span class="status-dot"></span>
+                <span class="status-text">Disponible para Oportunidades Profesionales</span>
+              </div>
+              <!-- CHIP DE TELÉFONO VISIBLE -->
+              <a href="tel:0939484810" class="status-chip" style="border-color: var(--accent-primary); color: var(--accent-primary); background: var(--accent-secondary-bg); text-decoration: none;" title="Haz clic para llamar">
+                <svg class="svg-icon" viewBox="0 0 24 24" style="width: 14px; height: 14px;"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <span class="status-text" style="font-weight: 700;">Cel: 0939484810</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACCIONES RÁPIDAS DE CONTACTO (CON NÚMERO VISIBLE EN LOS BOTONES) -->
+        <div class="quick-actions">
+          <a href="https://wa.me/593939484810" target="_blank" rel="noopener noreferrer" class="action-btn" title="Enviar WhatsApp al 0939484810">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.81 9.81 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.17 8.17 0 0 1-5.83 2.42c-1.47 0-2.91-.39-4.17-1.14l-.3-.18-3.1 1 .83-3.02-.2-.31a8.19 8.19 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.24-8.24zm4.53 10.96c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.15.17-.29.18-.54.06s-1.05-.39-2-1.23c-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.35-.77-1.85c-.2-.48-.41-.42-.56-.43-.14 0-.3-.01-.46-.01s-.42.06-.64.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+            <span class="action-label">WhatsApp</span>
+            <span class="action-sublabel">0939484810</span>
+          </a>
+          <a href="tel:0939484810" class="action-btn" title="Llamar directamente al 0939484810">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span class="action-label">Llamar</span>
+            <span class="action-sublabel">0939484810</span>
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=erazodaniela1995@gmail.com" target="_blank" rel="noopener noreferrer" class="action-btn" title="Enviar correo a erazodaniela1995@gmail.com">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <span class="action-label">Email</span>
+            <span class="action-sublabel">Gmail Personal</span>
+          </a>
+          <button type="button" class="action-btn" onclick="exportVCard()" title="Descargar vCard de Daniela Erazo">
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1z"/></svg>
+            <span class="action-label">vCard</span>
+            <span class="action-sublabel">Contacto</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- RESUMEN EJECUTIVO Y MÉTRICAS -->
+      <div class="overview-grid">
+        <article class="card overview-card">
+          <h2 class="card-title">Perfil Profesional</h2>
+          <p class="overview-text">
+            Soy una persona responsable, disciplinada, trabajadora, cumplida, ordenada, con alta capacidad de trabajo en equipo, honesta y con facilidad de aprendizaje. Comprometida en prestar mis servicios y aplicar mis conocimientos tecnológicos en beneficio de la sociedad. Actualmente me encuentro cursando el 7mo semestre de la carrera de Ingeniería en Computación en la Universidad Politécnica Estatal del Carchi (UPEC).
+          </p>
+        </article>
+
+        <article class="card metrics-card">
+          <h2 class="card-title">Métricas Clave</h2>
+          <div class="metrics-grid">
+            <div class="metric-box">
+              <span class="metric-value">7mo</span>
+              <span class="metric-label">Sem. UPEC</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-value">100%</span>
+              <span class="metric-label">Compromiso</span>
+            </div>
+            <div class="metric-box">
+              <span class="metric-value">2+</span>
+              <span class="metric-label">Años Exp.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- COMPETENCIAS CLAVE CON CHECKMARKS VECTORIALES -->
+      <article class="card competencies-card">
+        <h2 class="card-title">Competencias Clave</h2>
+        <ul class="competencies-list">
+          <li>
+            <svg class="svg-icon check-icon-svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Desarrollo Web & Móvil con HTML5, CSS3, JavaScript y Flutter WebView
+          </li>
+          <li>
+            <svg class="svg-icon check-icon-svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Programación Orientada a Objetos en Java y C++
+          </li>
+          <li>
+            <svg class="svg-icon check-icon-svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Gestión Documental, Administración y Ofimática Avanzada
+          </li>
+          <li>
+            <svg class="svg-icon check-icon-svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Modelado de Bases de Datos Relacionales (SQL / MySQL)
+          </li>
+          <li>
+            <svg class="svg-icon check-icon-svg" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Trabajo en Equipo, Disciplina y Adaptabilidad profesional
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIA Y PROYECTOS (ACORDEÓN) -->
+    <section id="experiencia" class="section-container">
+      <h2 class="section-title">Experiencia Laboral & Proyectos</h2>
+      <p class="section-subtitle">Haz clic en cada tarjeta para desplegar los detalles de actividades y logros.</p>
+
+      <div class="accordion" id="experienceAccordion">
+        <!-- ITEM 1 -->
+        <article class="accordion-item card active">
+          <header class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="true">
+            <div class="accordion-title-wrapper">
+              <h3 class="role-title">Secretaria Administrativa</h3>
+              <span class="company-name">GAD Municipal de Tulcán</span>
+            </div>
+            <div class="accordion-meta">
+              <span class="period-badge">1 Año de Gestión</span>
+              <svg class="svg-icon accordion-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+          </header>
+          <div class="accordion-content">
+            <p class="job-description">Gestión documental, atención al ciudadano y administración de archivos institucionales.</p>
+            <h4 class="achievements-heading">Logros y Responsabilidades:</h4>
+            <ul class="achievements-list">
+              <li>Organización y digitalización sistemática de archivos y correspondencia oficial.</li>
+              <li>Atención eficiente al usuario y redacción de informes administrativos.</li>
+              <li>Optimización del flujo de recepción y despacho de documentación municipal.</li>
+            </ul>
+            <div class="tags-wrapper">
+              <span class="tag">Gestión Documental</span>
+              <span class="tag">Ofimática</span>
+              <span class="tag">Atención al Cliente</span>
+              <span class="tag">Archivo Digital</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 2 (ACTUALIZADO: UNIDAD EDUCATIVA CONSEJO PROVINCIAL SEDE 2) -->
+        <article class="accordion-item card">
+          <header class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="false">
+            <div class="accordion-title-wrapper">
+              <h3 class="role-title">Docente Suplente (5to EGB)</h3>
+              <span class="company-name">Unidad Educativa Consejo Provincial Sede 2</span>
+            </div>
+            <div class="accordion-meta">
+              <span class="period-badge">2 Meses</span>
+              <svg class="svg-icon accordion-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+          </header>
+          <div class="accordion-content">
+            <p class="job-description">Impartición de clases y acompañamiento pedagógico a niños de quinto de educación básica en la Unidad Educativa Consejo Provincial Sede 2.</p>
+            <h4 class="achievements-heading">Logros y Responsabilidades:</h4>
+            <ul class="achievements-list">
+              <li>Planificación de actividades escolares adaptadas al plan curricular de educación primaria.</li>
+              <li>Liderazgo y manejo de grupo fortaleciendo la disciplina y valores de los estudiantes.</li>
+              <li>Evaluación y seguimiento continuo del rendimiento académico.</li>
+            </ul>
+            <div class="tags-wrapper">
+              <span class="tag">Docencia</span>
+              <span class="tag">Pedagogía</span>
+              <span class="tag">Liderazgo</span>
+              <span class="tag">Comunicación</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ITEM 3: PROYECTO MÓVIL UPEC -->
+        <article class="accordion-item card">
+          <header class="accordion-header" onclick="toggleAccordion(this)" aria-expanded="false">
+            <div class="accordion-title-wrapper">
+              <h3 class="role-title">Proyecto: Evolución CV Nativo a Web Embed en Flutter</h3>
+              <span class="company-name">UPEC • Aplicaciones Móviles</span>
+            </div>
+            <div class="accordion-meta">
+              <span class="period-badge">2026</span>
+              <svg class="svg-icon accordion-chevron" viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+            </div>
+          </header>
+          <div class="accordion-content">
+            <p class="job-description">Desarrollo de aplicación móvil híbrida con arquitectura Web Embed en Flutter.</p>
+            <h4 class="achievements-heading">Aspectos Destacados:</h4>
+            <ul class="achievements-list">
+              <li>Evolución de la app nativa Kotlin (Compose) hacia un esquema híbrido multiplataforma.</li>
+              <li>Diseño de interfaz Web responsive (HTML5, CSS3, JS) integrada en WebView.</li>
+              <li>Implementación de controles nativos en Flutter (cambio de tema, recarga y compartir).</li>
+            </ul>
+            <div class="tags-wrapper">
+              <span class="tag">Flutter</span>
+              <span class="tag">WebView</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">HTML5/CSS3</span>
+              <span class="tag">UPEC</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES TÉCNICAS (MATRIZ CON FILTRADO) -->
+    <section id="skills" class="section-container">
+      <h2 class="section-title">Skills Matrix (Habilidades & Herramientas)</h2>
+      <p class="section-subtitle">Filtra las competencias por categoría técnica para examinar el nivel de dominio.</p>
+
+      <!-- BOTONES DE FILTRADO POR CATEGORÍA -->
+      <div class="skills-filter-bar" role="tablist" aria-label="Filtro de habilidades">
+        <button type="button" class="chip-filter active" data-category="Todas" onclick="filterSkills('Todas', this)">Todas</button>
+        <button type="button" class="chip-filter" data-category="Mobile" onclick="filterSkills('Mobile', this)">Mobile/Web</button>
+        <button type="button" class="chip-filter" data-category="Backend" onclick="filterSkills('Backend', this)">Programación</button>
+        <button type="button" class="chip-filter" data-category="Admin" onclick="filterSkills('Admin', this)">Administración</button>
+      </div>
+
+      <!-- LISTA DE BARRAS DE PROGRESO DE SKILLS -->
+      <div class="skills-grid" id="skillsGrid">
+        <article class="skill-card card" data-category="Mobile">
+          <div class="skill-info">
+            <span class="skill-name">HTML5 / CSS3 / JavaScript</span>
+            <span class="skill-percentage">88%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 88%;"></div>
+          </div>
+        </article>
+
+        <article class="skill-card card" data-category="Mobile">
+          <div class="skill-info">
+            <span class="skill-name">Flutter & WebView Embed</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 85%;"></div>
+          </div>
+        </article>
+
+        <article class="skill-card card" data-category="Backend">
+          <div class="skill-info">
+            <span class="skill-name">Lenguaje Java & C++</span>
+            <span class="skill-percentage">82%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 82%;"></div>
+          </div>
+        </article>
+
+        <article class="skill-card card" data-category="Backend">
+          <div class="skill-info">
+            <span class="skill-name">Bases de Datos SQL (MySQL)</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 80%;"></div>
+          </div>
+        </article>
+
+        <article class="skill-card card" data-category="Admin">
+          <div class="skill-info">
+            <span class="skill-name">Gestión Documental & Ofimática</span>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 95%;"></div>
+          </div>
+        </article>
+
+        <article class="skill-card card" data-category="Admin">
+          <div class="skill-info">
+            <span class="skill-name">Trabajo en Equipo & Liderazgo</span>
+            <span class="skill-percentage">95%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" style="width: 95%;"></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN EDUCACIÓN Y CERTIFICACIONES -->
+    <section id="educacion" class="section-container">
+      <h2 class="section-title">Estudios Realizados & Capacitación</h2>
+
+      <div class="education-grid">
+        <article class="card education-card">
+          <h3 class="edu-title">Estudios Superiores</h3>
+          <p class="edu-institution">Universidad Politécnica Estatal del Carchi (UPEC)</p>
+
+          <span class="edu-period">7mo Semestre • Cursando</span>
+          <p class="edu-details">Carrera de Ingeniería en Computación. Formación técnica en desarrollo de software, arquitectura web/móvil y sistemas de información.</p>
+
+          <div style="margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--text-primary);">Títulos y Estudios Previos</h4>
+            <ul style="list-style: none; padding-left: 0; margin-top: 6px; font-size: 0.85rem; color: var(--text-muted);">
+              <li style="margin-bottom: 4px;"><strong>Bachiller en Químico - Biólogo:</strong> Unidad Educativa Consejo Provincial Sede 2</li>
+              <li><strong>Estudios Primarios:</strong> Escuela "Otto Arosemena Gómez"</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card certs-card">
+          <h3 class="card-title">Cursos Realizados</h3>
+          <ul class="certs-list">
+            <li class="cert-item">
+              <span class="cert-icon-wrapper">
+                <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM3.89 9L12 4.57 20.11 9 12 13.43 3.89 9zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+              </span>
+              <div class="cert-info">
+                <h4 class="cert-title">Curso de Auxiliar de Enfermería</h4>
+                <p class="cert-issuer">Capacitación Técnica Certificada</p>
+              </div>
+            </li>
+            <li class="cert-item">
+              <span class="cert-icon-wrapper">
+                <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/></svg>
+              </span>
+              <div class="cert-info">
+                <h4 class="cert-title">Desarrollo de Aplicaciones Móviles</h4>
+                <p class="cert-issuer">Universidad Politécnica Estatal del Carchi (UPEC)</p>
+              </div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN REFERENCIAS PERSONALES -->
+    <section id="referencias" class="section-container">
+      <h2 class="section-title">Referencias Personales</h2>
+      <p class="section-subtitle">Contactos de recomendación personal y profesional.</p>
+
+      <div class="education-grid">
+        <article class="card">
+          <h3 class="edu-title">Tlga. Sandra Lima</h3>
+          <p class="edu-institution">Sandynet</p>
+          <p class="edu-details" style="margin-top: 6px;">
+            <strong>Telf:</strong> 062 224-327<br>
+            <strong>Celular:</strong> 0939735653
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 class="edu-title">Sra. Sonia Paredes</h3>
+          <p class="edu-institution">Referencia Personal</p>
+          <p class="edu-details" style="margin-top: 6px;">
+            <strong>Celular:</strong> 062 245-839 / 0939735653
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FORMULARIO DE CONTACTO (ENVÍO DIRECTO A WHATSAPP DE DANIELA) -->
+    <section id="contacto" class="section-container">
+      <article class="card contact-card">
+        <h2 class="section-title">Formulario de Contacto por WhatsApp</h2>
+        <p class="section-subtitle">Escribe tus datos y el mensaje se enviará directamente al WhatsApp de Daniela Erazo (0939484810).</p>
+
+        <form id="contactForm" onsubmit="handleContactSubmit(event)" novalidate>
+          <div class="form-group">
+            <label for="contactName">Nombre completo <span class="required-asterisk">*</span></label>
+            <input type="text" id="contactName" name="name" class="form-control" placeholder="Ej. Carlos Andrade" required>
+            <span class="error-msg" id="nameError">Por favor ingresa tu nombre completo.</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Correo electrónico <span class="required-asterisk">*</span></label>
+            <input type="email" id="contactEmail" name="email" class="form-control" placeholder="Ej. carlos.andrade@email.com" required>
+            <span class="error-msg" id="emailError">Por favor ingresa un correo electrónico válido (ej. usuario@dominio.com).</span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Mensaje <span class="required-asterisk">*</span></label>
+            <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            <span class="error-msg" id="messageError">Por favor escribe tu mensaje.</span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn" style="background: linear-gradient(135deg, #25d366, #128c7e);">
+            <span class="btn-text">Enviar Mensaje a WhatsApp (0939484810)</span>
+            <svg class="svg-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.81 9.81 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.27-2.42 5.82a8.17 8.17 0 0 1-5.83 2.42c-1.47 0-2.91-.39-4.17-1.14l-.3-.18-3.1 1 .83-3.02-.2-.31a8.19 8.19 0 0 1-1.26-4.39c0-4.54 3.7-8.24 8.24-8.24zm4.53 10.96c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.15.17-.29.18-.54.06s-1.05-.39-2-1.23c-.74-.66-1.24-1.47-1.39-1.72-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.44.12-.15.17-.25.25-.42.08-.17.04-.31-.02-.44s-.56-1.35-.77-1.85c-.2-.48-.41-.42-.56-.43-.14 0-.3-.01-.46-.01s-.42.06-.64.3c-.22.25-.85.83-.85 2.02 0 1.19.87 2.34.99 2.5.12.17 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.47-.6 1.67-1.18.2-.58.2-1.08.14-1.18-.06-.1-.22-.16-.47-.29z"/></svg>
+          </button>
+        </form>
+
+        <div id="formSuccessAlert" class="alert-success" role="alert" style="display: none; background-color: rgba(37, 211, 102, 0.15); border-color: #25d366; color: #128c7e;">
+          <svg class="svg-icon svg-icon-lg" viewBox="0 0 24 24" style="fill: #25d366;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          <div class="alert-content">
+            <strong>¡Abriendo WhatsApp!</strong>
+            <p>Se ha preparado tu mensaje para enviarlo directamente al celular 0939484810 de Daniela Erazo.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>&copy; 2026 Daniela Madelain Erazo Montenegro • Hoja de Vida Profesional.</p>
+      <p class="footer-subtext">Universidad Politécnica Estatal del Carchi (UPEC) • Ingeniería en Computación (7mo Semestre)</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
